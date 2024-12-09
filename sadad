@@ -34565,7 +34565,7 @@
 		}
 		ctx.fillStyle = "#074A87";
 		ctx.fillRect(this.translate.x + 757 * scale, this.translate.y + 17 * scale, user.gauges.thirst.x * 178 * scale, 18 * scale);
-
+/*
         ctx.save();
 		ctx.beginPath();
 		ctx.lineWidth = 6;
@@ -34584,7 +34584,7 @@
 		ctx.strokeText(Math.floor(user.gauges.l * 200) + "hp", this.translate.x -75, this.translate.y + 35);
 		ctx.fillText(Math.floor(user.gauges.l * 200) + "hp", this.translate.x -75, this.translate.y + 35);
 		ctx.restore();
-        
+        */ 
         
 		scale = old_scale;
 
@@ -34816,7 +34816,7 @@
 
 		var p = world.fast_units[user.id];
 
-		if (p && Utils.dist(this, p) < 0) ctx.globalAlpha = 0.3;
+		if (p && Utils.dist(this, p) > 0) ctx.globalAlpha = 0.3;
 
 		ctxDrawImage(ctx, img, -w / 2 + x, -h / 2 + y, w, h);
 		ctx.globalAlpha = 1;
